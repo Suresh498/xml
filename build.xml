@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ant" default="run">
+	<target name="run" depends="compile">
+		<java classname="com.ant.code.Hello">
+			<classpath path="staging"/>
+		</java>
+		<java classname="com.ant.code.Hello2">
+			<classpath path="staging"/>
+		</java>
+		<echo>Run Successfully</echo>
+	</target>
+	<target name="compile">
+		<javac includeantruntime="false" srcdir="src" destdir="staging"/>
+		<echo>compiles Successfully</echo>
+	</target>
+</project>
